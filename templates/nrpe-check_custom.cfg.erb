@@ -1,0 +1,2 @@
+# Configuration for <%= @title %> (from custom template)
+command[<%= @command %>]=<% if @sudo %>sudo <% if @sudo_user %>-u <%= @sudo_user %> <% end %><% end %><%= scope.lookupvar('nagios::client::plugin_dir') %>/custom/<%= @script %><% if @args.to_s != '' %> <%= @args %><% end %>
